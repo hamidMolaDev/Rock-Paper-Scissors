@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">    
+
+    <link rel="stylesheet" href="rock-paper-scissors.css">
+    <link rel="icon" type="images/png" sizes="32x32" href="./rock-paper-scissors(images)/Scissors-emoji.png" >
+
+    <title>Rock Paper Scissors</title>
+
+  </head>
+  <body>
+    <main>  
+      <p class="title">Rock Paper Scissors</p>
+
+      <button class="move-button" onclick="
+        playGame('Rock');   
+      "><img class="move-image" src="./rock-paper-scissors(images)/Rock-emoji.png" alt="Rock icon"></button>
+
+      <button class="move-button" onclick="
+        playGame('Paper');
+      "><img class="move-image" src="./rock-paper-scissors(images)/Paper-emoji.png" alt="paper icon"></button>
+
+      <button class="move-button" onclick="  
+        playGame('Scissors');
+      "><img class="move-image" src="./rock-paper-scissors(images)/Scissors-emoji.png" alt="scissors icon"></button>
+
+      <p class="js-result result"></p>
+      <p class="js-moves"></p>
+      <p class="js-score score"></p>
+    
+      <button class="reset-button" onclick="
+        
+        score.wins= 0;
+        score.losses= 0;
+        score.ties= 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+        ">Reset Score
+      </button>
+
+    </main>  
+    <footer>
+    Coded by <a href="https://github.com/hamidMolaDev" targe="_blank">@hamidMolaDev</a>
+      
+    </footer>
+
+    <script src="rock-paper-scissors.js"></script>
+
+  </body>
+</html>
